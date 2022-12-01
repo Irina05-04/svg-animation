@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <div class="card">
+      <div class="card__diagram diagram">
+         <div class="diagram__content content">
+            <img src="./loyalty.svg" alt="">
+            <p class="content__persent"><span>72</span>.7</p>
+            <p class="content__name">Лояльность</p>
+            <p class="content__result">ниже среднего</p>
+            <p class="content__description">по отрасли: FMCG<br>значений слева от медианы<br>52.0% - 83.1%</p>
+            <p class="content__index">3.1</p>
+         </div>
+         <div class="diagram__svg">
+            <svg viewBox="0 0 60 60" class="circle">
+               <path class="circle__bg"
+               stroke-dasharray="155, 175"
+               stroke-dashoffset="-10"
+                 d="M30 2.0845
+                   a 28 28 0 0 1 0 56
+                   a 28 28 0 0 1 0 -56"
+               />
+               <path class="circle__green"
+                 stroke-dasharray="111.6, 175"
+                 stroke-dashoffset="-10"
+                 d="M30 2.0845
+                   a 28 28 0 0 1 0 56
+                   a 28 28 0 0 1 0 -56"
+               />
+               <path class="circle__yellow"
+                 stroke-dasharray="58, 175"
+                 stroke-dashoffset="-10"
+                 d="M30 2.0845
+                   a 28 28 0 0 1 0 56
+                   a 28 28 0 0 1 0 -56"
+               />
+             </svg>
+         </div>
+      </div>
+      <div class="card__description description">
+         <div class="description__item item">
+            <p class="item__name">Промоутеры</p>
+            <div class="item__persent">
+               <p class="item__persent_number">32.0%</p>
+               <div class="item__persent_people people">
+                  <p class="people__amount">81</p>
+                  <img src="./human_full.svg" alt="" class="people__img">
+               </div>
+            </div>
+            <div class="item__index index">
+               <svg width="70" height="30">
+                  <rect class="index__rect" rx="5" ry="5" width="65" height="28" />                  
+                  <text class="index__text" x="30" y="18">+1.2%</text>
+               </svg>
+               <svg class="index__rect_lcolor" width="30" height="30">
+                  <path d="M0,22 L20,22 L20,28 L5,28 Q0,28 0,23 L0,22" style="fill: rgba(34, 174, 78, 0.534); "/>
+               </svg>
+               <svg class="index__rect_color" width="30" height="30">
+                  <path d="M3,0 L23,0 L23,22 L0,22 L0,5 Q0,0 6,0 Z" style="fill: rgb(34, 174, 78); "/>
+               </svg>
+            </div>
+         </div>
+         <div class="description__item item">
+            <p class="item__name">Скептики</p>
+            <div class="item__persent">
+               <p class="item__persent_number">39.1%</p>
+               <div class="item__persent_people people">
+                  <p class="people__amount">8</p>
+                  <img src="./human_full.svg" alt="" class="people__img">
+               </div>
+            </div>
+            <div class="item__index index">
+               <svg width="70" height="30">
+                  <rect class="index__rect" rx="5" ry="5" width="65" height="28" />
+                  <text class="index__text" x="30" y="18">+4.8%</text>
+               </svg>
+               <svg class="index__rect_lcolor" width="30" height="30">
+                  <path d="M0,22 L18,22 L18,28 L5,28 Q0,28 0,23 L0,22" style="fill: rgba(252, 227, 41, 0.448);"/>
+               </svg>
+               <svg class="index__rect_color" width="30" height="30">
+                  <path d="M3,0 L23,0 L23,22 L0,22 L0,5 Q0,0 6,0 Z" style="fill: rgb(252, 227, 41);"/>
+               </svg>
+            </div>
+         </div>
+         <div class="description__item item">
+            <p class="item__name">Критики</p>
+            <div class="item__persent">
+               <p class="item__persent_number">79.8%</p>
+               <div class="item__persent_people people">
+                  <p class="people__amount">7</p>
+                  <img src="./human_full.svg" alt="" class="people__img">
+               </div>
+            </div>
+            <div class="item__index index">
+               <svg width="70" height="30">
+                  <rect class="index__rect" rx="5" ry="5" width="65" height="28" />
+                  <text class="index__text" x="30" y="18">-9.7%</text>
+               </svg>
+               <svg class="index__rect_lcolor" width="30" height="30">
+                  <path d="M0,22 L23,22 L23,28 L5,28 Q0,28 0,23 L0,5 Z" style="fill: rgba(248, 65, 45, 0.534); "/>
+               </svg>
+               <svg class="index__rect_color" width="30" height="30">
+                  <path d ="M3,0 L17,0 L17,22 L0,22 L0,5 Q0,0 6,0 Z" style="fill: rgb(248, 65, 45); "/>
+               </svg>
+            </div>
+         </div>
+      </div>
+      <svg class="line" width="30" height="300">
+         <path class="line__style" d="M50,5 L10,5 Q5,5 5,10 L5,140"/>
+         <path class="line__style" d="M5,125 L20,125"/>
+         <path class="line__style" d="M5,150 L5,160"/>
+         <path class="line__style" d="M0,155 L10,155"/>
+         <path class="line__style" d="M5,162 L5,172 Q5,180 10,180 L15,180"/>
+      </svg> 
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,197 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-family: Arial;
+}
+.circle{
+   display: block;
+   margin: 10px auto;
+   &__bg {
+      fill: none;
+      stroke: #eee;
+      stroke-linecap: round;
+      stroke-width: 1.5;
+   }
+   &__green {
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+      stroke: #1db26f;
+    }
+    &__yellow {
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+      stroke: #ffe066;
+    }
+}
+
+ @keyframes progress {
+   0% {
+     stroke-dasharray: 0 175;
+   }
+ }
+ @keyframes index {
+   from {
+     left: -100px;
+   }
+   to {
+      left: 0;
+   }
+ }
+ 
+ .percentage {
+   fill: #666;
+   font-family: sans-serif;
+   font-size: 0.5em;
+   text-anchor: middle;
+ }
+
+
+.diagram{
+   position: relative;
+   &__content{
+      margin-top: 20px;
+   }
+   &__svg{
+      top: 20px;
+      left: calc(50% - 100px);
+      width: 200px;
+      position: absolute;
+   }
+}
+.content {
+   &__persent{
+      width: fit-content;
+      padding-top: 10px;
+      position: relative;
+      margin: 0 auto;
+      & > span {
+         font-weight: 400;
+         font-size: 32px;
+      }
+      &:after{
+         content: "%";
+         color: #b5b5b5;
+         position: absolute;
+         top: 8px;
+         right: -2px;
+      }
+   }
+   &__name {
+      margin: 5px 0;
+      font-weight: bold;
+      font-size: 16px;
+   }
+   &__result{
+      color: #ffe066;
+      font-weight: bold;
+      font-size: 14px;
+   }
+   &__description{
+      color: #b5b5b5;
+      font-size: 10px;
+      font-weight: 500;
+   }
+   &__index {
+      color: #1db26f;
+      margin-top: 10px;
+      &:before{
+         content: "▲";
+      }
+   }
+}
+
+.card{
+   text-align: center;
+   position: relative;
+   width: 270px;
+   margin: 0 auto;
+   &__description{
+      margin: 60px auto;
+      width: 220px;
+   }
+}
+.description {
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   &__item{
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.item {
+   &__name{
+      font-size: 14px;
+      font-weight: 500;
+      width: 85px;
+      text-align: left;
+   }
+   &__persent{
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &_number{
+         font-weight: 500;
+         color: #666;
+      }
+   }
+   
+}
+.people{
+   display: flex;
+   align-items: flex-end;
+   column-gap: 5px;
+   &__amount{
+      font-size: 12px;
+      color: rgb(183, 182, 182);
+   }
+   &__img{
+      width: 15px;
+   }
+}
+.index{
+   position: relative;
+   width: 70px;
+   height: 30px;
+   overflow: hidden;
+   &__rect{
+      stroke: #ccc;
+      fill: #f1f1f1;
+      stroke-width: 1;
+      &_color{
+         position: absolute;
+         top: 0;
+         left: 0px;
+         animation: index 0.5s ease-in;
+      }
+      &_lcolor{
+         position: absolute;
+         bottom: 0;
+         left: 0px;
+         animation: index 0.6s ease-in;
+      }
+   }
+   &__text{
+      font-size: 10px;
+      font-weight: 500;
+      fill: rgb(89, 88, 88);
+   }
+}
+
+.line{
+   position: absolute;
+   top: 150px;
+   left: 0;
+   &__style{
+      stroke: #ccc;
+      stroke-width: 1;
+      fill: none;
+   }
+}
